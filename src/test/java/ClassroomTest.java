@@ -15,7 +15,7 @@ public class ClassroomTest {
 	Classroom cr = new Classroom("", "", studList);
 	Student stud1 = new Student("Nisse", "Svensson", 35, 'M');
 	Student stud2 = new Student("Britta", "Persson", 32, 'F');
-		
+			
 	@Test
 	public void testClassroomName() {
 		cr.setClassroomName("Test automation");

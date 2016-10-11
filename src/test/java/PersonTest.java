@@ -10,7 +10,14 @@ import otherclasses.Person;
 public class PersonTest {
 	public static final Logger LOG = Logger.getLogger(Classroom.class.getName());
 	Person pers = new Person("", "", 100, 'X');
-			
+
+	@Test
+	public void testConstructor(){
+		Person p = new Person("Maja", "Ekström", 11, 'F');
+		p.setFirstName("Mikaela");
+		assertTrue(p.getFirstName().equals("Mikaela"));
+	}
+	
 	@Test
 	public void testAge() {
 		pers.setAge(20);

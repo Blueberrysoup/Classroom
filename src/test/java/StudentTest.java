@@ -16,21 +16,21 @@ public class StudentTest {
 	public void testFirstGrade() {
 		stud1.setFirstGrade(5.0);
 		LOG.info("Testing the methods setFirstGrade and getFirstGrade.");
-		assertEquals(5.0, stud1.getFirstGrade(), 0.0);
+		assertEquals(5.0, stud1.getFirstGrade(), 0.5);
 	}
 
 	@Test
 	public void testSecondGrade() {
 		stud1.setSecondGrade(6.0);
 		LOG.info("Testing the methods setSecondGrade and getSecondGrade.");
-		assertEquals(6.0, stud1.getSecondGrade(), 0.0);
+		assertEquals(6.0, stud1.getSecondGrade(), 0.5);
 	}
 
 	@Test
 	public void testThirdGrade() {
 		stud1.setThirdGrade(7.0);
 		LOG.info("Testing the methods setThirdName and getThirdName.");
-		assertEquals(7.0, stud1.getThirdGrade(), 0.0);
+		assertEquals(7.0, stud1.getThirdGrade(), 0.5);
 	}
 
 	@Test
@@ -38,7 +38,7 @@ public class StudentTest {
 		stud1.setSecondGrade(6.0);
 		stud1.setThirdGrade(7.0);
 		LOG.info("Testing the method calculateAverageFirst.");		
-		assertEquals(6.0, stud1.calculateAverage(5.0), 0.0);
+		assertEquals(6.0, stud1.calculateAverage(5.0), 0.5);
 	}
 	
 	@Test
@@ -47,13 +47,13 @@ public class StudentTest {
 		stud1.setSecondGrade(6.0);
 		stud1.setThirdGrade(7.0);
 		LOG.info("Testing the method calculateAverageEmpty.");		
-		assertEquals(6.0, stud1.calculateAverage(), 0.0);
+		assertEquals(6.0, stud1.calculateAverage(), 0.5);
 	}
 
 	@Test
 	public void testCalculateAverageGradeAll() {
 		LOG.info("Testing the method calculateAverageAll.");		
-		assertEquals(6.0, stud1.calculateAverage(5.0, 6.0, 7.0), 0.0);
+		assertEquals(6.0, stud1.calculateAverage(5.0, 6.0, 7.0), 0.5);
 	}
 	
 	@Test
