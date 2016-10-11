@@ -35,10 +35,36 @@ public class ClassroomTest {
 	}
 	
 	@Test
-	public void testStudents() {
+	public void testSetGetStudents() {
 		studList.clear();
 		studList.add(stud1);
 		cr.setStudents(studList);
 		assertEquals(studList,cr.getStudents());
 	}
+	
+	@Test
+	public void testRemoveAStudent() {
+		studList.clear();
+		studList.add(stud1);
+		studList.add(stud2);
+		
+		cr.setStudents(studList);
+		
+		cr.removeAStudent("Carina");
+		assertEquals(studList,cr.getStudents());
+		
+		cr.removeAStudent("Britta");
+		studList.remove(stud2);
+		assertEquals(studList,cr.getStudents());
+	}
+	
+	@Test
+	public void testPrintFullRelatory() {
+		studList.clear();
+		studList.add(stud1);
+		studList.add(stud2);		
+		cr.setStudents(studList);
+		cr.printFullRelatory();
+	}
+
 }
